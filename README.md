@@ -11,7 +11,7 @@ A regular expression is a string that describes a match pattern. The match patte
 # Table of Contents
 
 - [Installation](#installation)
-- [Basic Usage](#basic-usage)
+- [Simple Test](#basic-usage)
 - [Using Cursor](#using-cursor)
 - [Built-in RegEx](#formatters)
 	- [URL](#foxfakerproviderbase)
@@ -32,7 +32,7 @@ A regular expression is a string that describes a match pattern. The match patte
 Just copy the FoxRegEx prg anywhere into your project PATH folder.
 ```
 
-## Basic Usage
+## Simple Test
 ```xBase
 // declare the FoxRegEx Prg
 Set Procedure to "FoxRegEx" Additive
@@ -52,14 +52,19 @@ _vfp.FoxRegEx.Global = .T.
 // Turn on IgnoreCase flag for matching lowercase and uppercase.
 _vfp.FoxRegEx.IgnoreCase = .T.
 // The Pattern property stores the specials characters that defines the math pattern.
-_vfp.FoxRegEx.Pattern = "vfp"
+_vfp.FoxRegEx.Pattern = "\b\w+\b"
 // By setting UseCursor to true you must set two mores flags (CursorName and Session)
 _vfp.FoxRegEx.UseCursor = .T.
 // CursorName will be the final cursor which contain all the matches.
 _vfp.FoxRegEx.CursorName = "cMatches"
 // Set the Session property if you are using private sessions.
 _vfp.FoxRegEx.Session = _Screen.DataSessionID
-// Finally
+// Finally call the Execute() method with the source string.
+nCount = _vfp.FoxRegEx.Execute("the mouse and the cat")
+If nCount > 0
+   Select cMatches
+   Browse Title "My matches"
+Endif
 ```
 ## Formatters
 
