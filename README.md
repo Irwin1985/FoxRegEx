@@ -12,6 +12,7 @@ A regular expression is a string that describes a match pattern. The match patte
 
 - [Installation](#installation)
 - [Basic Usage](#basic-usage)
+- [Using Cursor](#using-cursor)
 - [Built-in RegEx](#formatters)
 	- [URL](#foxfakerproviderbase)
 	- [IPv4](#foxfakerproviderlorem)
@@ -38,19 +39,27 @@ Set Procedure to "FoxRegEx" Additive
 
 // Instantiate FoxFaker Object
 =AddProperty(_vfp, "FoxRegEx", CreateObject("FoxFaker", "FoxFaker.prg"))
+// The Pattern property stores the specials characters that defines the math pattern.
+_vfp.FoxRegEx.Pattern = "vfp"
+// Call the Test() method for quick pattern validations.
+?_vfp.FoxRegEx.Test("vfp Rocks!") //Returns boolean
+```
+## Using Cursor
 
-// Set the <code>Global</code> Flag true if you want to match all occurrences.
-_vfp.Global = .T.
+```xBase
+// Set the Global Flag true if you want to match all occurrences.
+_vfp.FoxRegEx.Global = .T.
 // Turn on IgnoreCase flag for matching lowercase and uppercase.
-_vfp.IgnoreCase = .T.
-// Turn on IgnoreCase flag for matching lowercase and uppercase.
-
-?Faker.fakeAddress() 	// "426 Jordy Lodge Cartwrightshire, SC 88120-6700"
-?Faker.text()
-  // Dolores sit sint laboriosam dolorem culpa et autem. Beatae nam sunt fugit
-  // et sit et mollitia sed.
-  // Fuga deserunt tempora facere magni omnis. Omnis quia temporibus laudantium
-  // sit minima sint.
+_vfp.FoxRegEx.IgnoreCase = .T.
+// The Pattern property stores the specials characters that defines the math pattern.
+_vfp.FoxRegEx.Pattern = "vfp"
+// By setting UseCursor to true you must set two mores flags (CursorName and Session)
+_vfp.FoxRegEx.UseCursor = .T.
+// CursorName will be the final cursor which contain all the matches.
+_vfp.FoxRegEx.CursorName = "cMatches"
+// Set the Session property if you are using private sessions.
+_vfp.FoxRegEx.Session = _Screen.DataSessionID
+// Finally
 ```
 ## Formatters
 
