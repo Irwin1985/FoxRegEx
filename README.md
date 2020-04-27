@@ -15,7 +15,7 @@ A regular expression is a string that describes a match pattern. The match patte
 - [Using Cursor](#using-cursor)
 - [Using Object](#using-object)
 - [Built-in RegEx](#built-in-regex)
-	- [URL](#foxregexbuiltinurl)
+	- [URL](#url)
 	- [IPv4](#foxregexbuiltinipv4)
 	- [IPv6](#foxregexbuiltinipv6)
 	- [Email](#foxregexbuiltinemail)
@@ -87,7 +87,7 @@ Endfor
 
 FoxRegEx comes with some built-in commons validators patterns such as email, URL, Date, etc.
 
-### `FoxRegEx\Builtin\URL`
+### `URL`
 ```xBase
     _vfp.FoxRegEx.isURL("https://github.com/Irwin1985/FoxRegEx")  // .T.
 ```
