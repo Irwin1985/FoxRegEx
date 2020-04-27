@@ -12,28 +12,23 @@ A regular expression is a string that describes a match pattern. The match patte
 
 - [Installation](#installation)
 - [Basic Usage](#basic-usage)
-- [Formatters](#formatters)
-	- [Base](#foxfakerproviderbase)
-	- [Lorem Ipsum Text](#foxfakerproviderlorem)
-	- [Person](#foxfakerprovideren_usperson)
-	- [Address](#foxfakerprovideren_usaddress)
-	- [Phone Number](#foxfakerprovideren_usphonenumber)
-	- [Company](#foxfakerprovideren_uscompany)
-	- [Date and Time](#foxfakerproviderdatetime)
-	- [Internet](#foxfakerproviderinternet)
-	- [Payment](#foxfakerproviderpayment)
-	- [Color](#foxfakerprovidercolor)
-	- [File](#foxfakerproviderfile)
-	- [Uuid](#foxfakerprovideruuid)
-	- [Barcode](#foxfakerproviderbarcode)
-	- [Miscellaneous](#foxfakerprovidermiscellaneous)
+- [Built-in RegEx](#formatters)
+	- [URL](#foxfakerproviderbase)
+	- [IPv4](#foxfakerproviderlorem)
+	- [IPv6](#foxfakerprovideren_usperson)
+	- [Email](#foxfakerprovideren_usaddress)
+	- [Youtube Video ID](#foxfakerprovideren_usphonenumber)
+	- [Youtube Channel ID](#foxfakerprovideren_uscompany)
+	- [HTML Tag](#foxfakerproviderdatetime)
+	- [Hex Color](#foxfakerproviderinternet)
+	- [Date](#foxfakerproviderpayment)
 - [License](#license)
 
 
 ## Installation
 
 ```
-Just copy the FoxFaker.prg and FactoryBase.txt files anywhere into your project path folder.
+Just copy the FoxRegEx prg anywhere into your project PATH folder.
 ```
 
 ## Basic Usage
@@ -173,5 +168,3 @@ Each of the generator properties (like `name`, `address`, and `lorem`) are calle
 ## License
 
 Faker is released under the MIT Licence.
-
-![](Tools/vfpxbanner_small.gif)
