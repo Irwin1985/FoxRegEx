@@ -400,6 +400,46 @@ Define Class FoxRegExTest As FxuTestCase Of FxuTestCase.prg
 		Endif
 	Endfunc
 && ======================================================================== &&
+&& Function TestIsPasswordFullStrength
+&& ======================================================================== &&
+	Function TestIsPasswordFullStrength As Void
+		Local lcSource As String, lcFormat As String
+		lcSource = "Wh:%RxM<q8UL$Y+/"
+		If This.AssertTrue(This.RegEx.isPassword(lcSource), "test failed")
+			This.PrintOk("TestIsPasswordFullStrength")
+		Endif
+	EndFunc
+&& ======================================================================== &&
+&& Function TestIsPasswordOnlySymbol
+&& ======================================================================== &&
+	Function TestIsPasswordOnlySymbol As Void
+		Local lcSource As String, lcFormat As String
+		lcSource = "}?(;!*@+}\)(,://"
+		If This.AssertTrue(This.RegEx.isPassword(lcSource, "s"), "test failed")
+			This.PrintOk("TestIsPasswordOnlySymbol")
+		Endif
+	Endfunc
+&& ======================================================================== &&
+&& Function TestIsPasswordOnlyNumbers
+&& ======================================================================== &&
+	Function TestIsPasswordOnlyNumbers As Void
+		Local lcSource As String, lcFormat As String
+		lcSource = "197953dd71"
+		If This.AssertTrue(This.RegEx.isPassword(lcSource, "n"), "test failed")
+			This.PrintOk("TestIsPasswordOnlyNumbers")
+		Endif
+	EndFunc
+&& ======================================================================== &&
+&& Function TestIsPasswordOnlyLetters
+&& ======================================================================== &&
+	Function TestIsPasswordOnlyLetters As Void
+		Local lcSource As String, lcFormat As String
+		lcSource = "SeCreTpAsSwOrD"
+		If This.AssertTrue(This.RegEx.isPassword(lcSource, "ul"), "test failed")
+			This.PrintOk("TestIsPasswordOnlyLetters")
+		Endif
+	Endfunc
+&& ======================================================================== &&
 && Function TestOk
 && ======================================================================== &&
 	Function PrintOk As Void

@@ -339,6 +339,39 @@ Define Class FoxRegEx As Session
 		Return Iif(!Empty(lcPattern), This.GenericTest(tcSource, lcPattern), False)
 	EndFunc
 && ======================================================================== &&
+&& Function isPassword
+&& ======================================================================== &&
+	Function isPassword As Boolean
+		lParameters tcSource As String, tcFlags As Integer
+
+		#Define SYMBOLS 	"s"
+		#Define NUMBERS 	"n"
+		#Define LOWERCASE 	"l"
+		#Define UPPERCASE	"u"
+
+		Local lcPattern As String, lcAuxiliarPattern As String
+
+		Text To lcPattern NoShow
+[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]|[0-9]|[a-z]|[A-Z]
+		EndText
+		tcFlags = evl(tcFlags, "")
+		Do Case
+		Case SYMBOLS $ lower(tcFlags)
+			Text To lcAuxiliarPattern NoShow
+[-@\\!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]
+			EndText
+			lcPattern = lcAuxiliarPattern
+		Case NUMBERS $ lower(tcFlags)
+			lcPattern = lcPattern + "|[0-9]"
+		Case LOWERCASE $ lower(tcFlags)
+			lcPattern = lcPattern + "|[a-z]"
+		Case UPPERCASE $ lower(tcFlags)
+			lcPattern = lcPattern + "|[A-Z]"
+		EndCase
+		lcPattern = "^(" + lcPattern + ")+$"
+		Return This.GenericTest(tcSource, lcPattern)
+	EndFunc
+&& ======================================================================== &&
 && Function isDate
 && ======================================================================== &&
 	Function isDate As Boolean
