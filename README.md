@@ -22,9 +22,10 @@ A regular expression is a string that describes a match pattern. The match patte
 	- [Email](#email)
 	- [Youtube-Video-ID](#youtube-video-id)
 	- [Youtube-Channel-ID](#youtube-channel-id)
-	- [HTML Tag](#html-tag)
-	- [Hex Color](#hex-color)
+	- [HTML-Tag](#html-tag)
+	- [Hex-Color](#hex-color)
 	- [Date](#date)
+	- [Credit-Card](#credit-card)
 - [License](#license)
 
 
@@ -122,11 +123,11 @@ _vfp.FoxRegEx.isYoutubeVideoID("https://www.youtube.com/watch?v=UUjpNm07vL8")  /
 ```xBase
 _vfp.FoxRegEx.isYoutubeChannelID("https://www.youtube.com/c/IrwinRodriguez")  // .T.
 ```
-### `HTML Tag`
+### `HTML-Tag`
 ```xBase
 _vfp.FoxRegEx.isHTMLTag("<vfp>Fox Rules!</vfp>")  // .T.
 ```
-### `Hex Color`
+### `Hex-Color`
 ```xBase
 _vfp.FoxRegEx.isHexColor("#FFFFFF")  // .T.
 ```
@@ -140,6 +141,21 @@ _vfp.FoxRegEx.isDate("1985-11-15", "YYYY-mm-dd")  // .T.
 _vfp.FoxRegEx.isDate("11-15-1985", "mm-dd-YYYY")  // .T.
 // using short year format
 _vfp.FoxRegEx.isDate("11-15-85", "mm-dd-YY")  // .T.
+```
+### `Credit-Card`
+```xBase
+// Visa Example
+_vfp.FoxRegEx.isCreditCard("4872272392854644", "Visa")  // .T.
+// MasterCard
+_vfp.FoxRegEx.isCreditCard("5247233849623284", "MasterCard")  // .T.
+// American Express
+_vfp.FoxRegEx.isCreditCard("347427037303510", "American Express")  // .T.
+// Diners Club
+_vfp.FoxRegEx.isCreditCard("38659767869174", "Diners Club")  // .T.
+// Discover
+_vfp.FoxRegEx.isCreditCard("6011063396747026", "Discover")  // .T.
+// JCB
+_vfp.FoxRegEx.isCreditCard("3538684728624673", "JCB")  // .T.
 ```
 ## License
 
