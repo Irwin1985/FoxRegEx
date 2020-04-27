@@ -13,8 +13,9 @@ A regular expression is a string that describes a match pattern. The match patte
 - [Installation](#installation)
 - [Simple Test](#basic-usage)
 - [Using Cursor](#using-cursor)
+- [Using Object](#using-object)
 - [Built-in RegEx](#formatters)
-	- [URL](#foxfakerproviderbase)
+	- [URL](#foxregexbuiltinurl)
 	- [IPv4](#foxfakerproviderlorem)
 	- [IPv6](#foxfakerprovideren_usperson)
 	- [Email](#foxfakerprovideren_usaddress)
@@ -63,14 +64,30 @@ _vfp.FoxRegEx.Session = _Screen.DataSessionID
 nCount = _vfp.FoxRegEx.Execute("the mouse and the cat")
 If nCount > 0
    Select cMatches
-   Browse Title "My matches"
+   Browse Fields Id, Value Title "These are the final columns"
 Endif
 ```
-## Formatters
+## Using Object
 
-Each of the generator properties (like `name`, `address`, and `lorem`) are called "formatters". A faker generator has many of them, packaged in "providers". Here is a list of the bundled formatters in the default locale.
+```xBase
+// Set the Global Flag true if you want to match all occurrences.
+_vfp.FoxRegEx.Global = .T.
+// Turn on IgnoreCase flag for matching lowercase and uppercase.
+_vfp.FoxRegEx.IgnoreCase = .T.
+// The Pattern property stores the specials characters that defines the math pattern.
+_vfp.FoxRegEx.Pattern = "\b\w+\b"
+// Call the Execute() method with the source string.
+loMatches = _vfp.FoxRegEx.Execute("the mouse and the cat")
+For loItem in loMatches
+   ?loItem.Value
+Endfor
+```
 
-### `FoxFaker\Provider\Base`
+## Built-in RegEx
+
+FoxRegEx comes with some built-in commons validators patterns such as email, URL, Date, etc.
+
+### `FoxRegEx\Builtin\URL`
 ```xBase
     fakeRandomDigit()             		// 9
     fakeRandomNumber(tnLength)  		// 16795371    
