@@ -54,7 +54,7 @@ _vfp.FoxRegEx.Global = .T.
 _vfp.FoxRegEx.IgnoreCase = .T.
 // The Pattern property stores the specials characters that defines the math pattern.
 _vfp.FoxRegEx.Pattern = "\b\w+\b"
-// By setting UseCursor to true you must set two mores flags (CursorName and Session)
+// By setting UseCursor to true you must set two more flags (CursorName and Session)
 _vfp.FoxRegEx.UseCursor = .T.
 // CursorName will be the final cursor which contain all the matches.
 _vfp.FoxRegEx.CursorName = "cMatches"
