@@ -335,8 +335,58 @@ Define Class FoxRegExTest As FxuTestCase Of FxuTestCase.prg
 	Function TestIsHexColor As Void
 		Local lcSource As String, lcFormat As String
 		lcSource = "#FFFFFF"
-		If This.AssertTrue(This.RegEx.IsHexColor(lcSource), "test failed")
+		If This.AssertTrue(This.RegEx.isHexColor(lcSource), "test failed")
 			This.PrintOk("TestIsHexColor")
+		Endif
+	EndFunc
+&& ======================================================================== &&
+&& Function TestIsCreditCardWithVisaPattern
+&& ======================================================================== &&
+	Function TestIsCreditCardWithVisaPattern As Void
+		Local lcSource As String, lcFormat As String
+		lcSource = "4872272392854644"
+		If This.AssertTrue(This.RegEx.isCreditCard(lcSource, "Visa"), "test failed")
+			This.PrintOk("TestIsCreditCardWithVisaPattern")
+		Endif
+	Endfunc
+&& ======================================================================== &&
+&& Function TestIsCreditCardWithMasterCardPattern
+&& ======================================================================== &&
+	Function TestIsCreditCardWithMasterCardPattern As Void
+		Local lcSource As String, lcFormat As String
+		lcSource = "5247233849623284"
+		If This.AssertTrue(This.RegEx.isCreditCard(lcSource, "MasterCard"), "test failed")
+			This.PrintOk("TestIsCreditCardWithMasterCardPattern")
+		Endif
+	EndFunc
+&& ======================================================================== &&
+&& Function TestIsCreditCardWithAmericanExpressPattern
+&& ======================================================================== &&
+	Function TestIsCreditCardWithAmericanExpressPattern As Void
+		Local lcSource As String, lcFormat As String
+		lcSource = "347427037303510"
+		If This.AssertTrue(This.RegEx.isCreditCard(lcSource, "American Express"), "test failed")
+			This.PrintOk("TestIsCreditCardWithAmericanExpressPattern")
+		Endif
+	Endfunc
+&& ======================================================================== &&
+&& Function TestIsCreditCardWithDinersPattern
+&& ======================================================================== &&
+	Function TestIsCreditCardWithDinersPattern As Void
+		Local lcSource As String, lcFormat As String
+		lcSource = "38659767869174"
+		If This.AssertTrue(This.RegEx.isCreditCard(lcSource, "Diners Club"), "test failed")
+			This.PrintOk("TestIsCreditCardWithDinersPattern")
+		Endif
+	Endfunc
+&& ======================================================================== &&
+&& Function TestIsCreditCardWithDiscoverPattern
+&& ======================================================================== &&
+	Function TestIsCreditCardWithDiscoverPattern As Void
+		Local lcSource As String, lcFormat As String
+		lcSource = "6011063396747026"
+		If This.AssertTrue(This.RegEx.isCreditCard(lcSource, "Discover"), "test failed")
+			This.PrintOk("TestIsCreditCardWithDiscoverPattern")
 		Endif
 	Endfunc
 && ======================================================================== &&

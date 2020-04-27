@@ -309,6 +309,36 @@ Define Class FoxRegEx As Session
 		Return This.GenericTest(tcSource, lcPattern)
 	EndFunc
 && ======================================================================== &&
+&& Function isCreditCard
+&& ======================================================================== &&
+	Function isCreditCard As Boolean
+		lParameters tcSource As String, tcProvider As String
+		#Define VISA 				"visa"
+		#Define MASTERCARD 			"mastercard"
+		#Define AMENRICAN_EXPRESS 	"american express"
+		#Define DINERS_CLUB			"diners club"
+		#Define DISCOVER			"discover"
+		#Define JCB					"jcb"
+
+		Local lcPattern As String
+		lcPattern = ""
+		Do Case
+		Case lower(tcProvider) == VISA
+			lcPattern = "^4[0-9]{12}(?:[0-9]{3})?$"
+		Case lower(tcProvider) == MASTERCARD
+			lcPattern = "^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$"
+		Case lower(tcProvider) == AMENRICAN_EXPRESS
+			lcPattern = "^3[47][0-9]{13}$"
+		Case lower(tcProvider) == DINERS_CLUB
+			lcPattern = "^3(?:0[0-5]|[68][0-9])[0-9]{11}$"
+		Case lower(tcProvider) == DISCOVER
+			lcPattern = "^6(?:011|5[0-9]{2})[0-9]{12}$"
+		Case lower(tcProvider) == JCB
+			lcPattern = "^(?:2131|1800|35\d{3})\d{11}$"
+		EndCase
+		Return Iif(!Empty(lcPattern), This.GenericTest(tcSource, lcPattern), False)
+	EndFunc
+&& ======================================================================== &&
 && Function isDate
 && ======================================================================== &&
 	Function isDate As Boolean
