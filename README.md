@@ -19,8 +19,8 @@ A regular expression is a string that describes a match pattern. The match patte
 	- [IPv4](#foxregexbuiltinipv4)
 	- [IPv6](#foxregexbuiltinipv6)
 	- [Email](#foxregexbuiltinemail)
-	- [Youtube Video ID](#foxregexbuiltinyoutubevideoid)
-	- [Youtube Channel ID](#foxregexbuiltinyoutubechannelid)
+	- [Youtube Video ID](#foxregexbuiltinyoutube-video-id)
+	- [Youtube Channel ID](#foxregexbuiltinyoutube-channel-id)
 	- [HTML Tag](#foxregexbuiltinhtmltag)
 	- [Hex Color](#foxregexbuiltinhexcolor)
 	- [Date](#foxregexbuiltindate)
@@ -103,11 +103,11 @@ FoxRegEx comes with some built-in commons validators patterns such as email, URL
 ```xBase
     _vfp.FoxRegEx.isEmail("rodriguez.irwin@gmail.com")  // .T.
 ```
-### `FoxRegEx\Builtin\YoutubeVideoID`
+### `FoxRegEx\Builtin\Youtube Video ID`
 ```xBase
     _vfp.FoxRegEx.isYoutubeVideoID("https://www.youtube.com/watch?v=UUjpNm07vL8")  // .T.
 ```
-### `FoxRegEx\Builtin\YoutubeChannelID`
+### `FoxRegEx\Builtin\Youtube Channel ID`
 ```xBase
     _vfp.FoxRegEx.isYoutubeChannelID("https://www.youtube.com/c/IrwinRodriguez")  // .T.
 ```
