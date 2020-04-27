@@ -1,7 +1,8 @@
 # FoxRegEx
 
-`FoxFaker` is a Visual FoxPro Class library that wrappers the <code>RegEx</code> built-in object in VBScript.
+`FoxRegEx` is a Visual FoxPro Class library that wrappers the <code>RegEx</code> built-in object in VBScript.
 
+<h2>Overview</h2>(#overview)
 
 `FoxFaker` was written with the purpose to be used with [FoxUnit](https://github.com/VFPX/FoxUnit) and [FoxMock](https://github.com/cwollenhaupt/foxmock) libraries. If you're not familiar with TDD (Test Driven Development) then you probably need to learn about it or just ignore it and use `FoxFaker` as you wish.
 
