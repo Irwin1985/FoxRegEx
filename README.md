@@ -11,7 +11,7 @@ A regular expression is a string that describes a match pattern. The match patte
 # Table of Contents
 
 - [Installation](#installation)
-- [Simple Test](#basic-usage)
+- [Simple Test](#simple-test)
 - [Using Cursor](#using-cursor)
 - [Using Object](#using-object)
 - [Built-in RegEx](#formatters)
