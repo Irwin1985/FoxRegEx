@@ -14,6 +14,7 @@ A regular expression is a string that describes a match pattern. The match patte
 - [Simple Test](#simple-test)
 - [Using Cursor](#using-cursor)
 - [Using Object](#using-object)
+- [Find And Replace](#find-and-replace)
 - [Built-in RegEx](#built-in-regex)
 	- [URL](#url)
 	- [IPv4](#ipv4)
@@ -82,9 +83,19 @@ For loItem in loMatches
    ?loItem.Value
 Endfor
 ```
-
+## Find And Replace
+```xBase
+// Set the Global Flag true if you want to match all occurrences.
+_vfp.FoxRegEx.Global = .T.
+// Turn on IgnoreCase flag for matching lowercase and uppercase.
+_vfp.FoxRegEx.IgnoreCase = .T.
+// The Pattern property stores the specials characters that defines the math pattern.
+_vfp.FoxRegEx.Pattern = "cat"
+// Call the Execute() method with the source string.
+lcReplacedText = _vfp.FoxRegEx.Replace("the mouse and the cat", "cheese")
+?lcReplacedText
+```
 ## Built-in RegEx
-
 FoxRegEx comes with some built-in commons validators patterns such as email, URL, Date, etc.
 
 ### `URL`
