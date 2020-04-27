@@ -42,7 +42,7 @@ Set Procedure to "FoxRegEx" Additive
 =AddProperty(_vfp, "FoxRegEx", CreateObject("FoxRegEx"))
 // The Pattern property stores the specials characters that defines the math pattern.
 _vfp.FoxRegEx.Pattern = "vfp"
-// Call the Test() method for quick pattern validations.
+// Call the Test() method for a quick pattern validation.
 ?_vfp.FoxRegEx.Test("vfp Rocks!") //.T.
 ```
 ## Using Cursor
