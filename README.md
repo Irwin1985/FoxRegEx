@@ -91,7 +91,7 @@ _vfp.FoxRegEx.Global = .T.
 _vfp.FoxRegEx.IgnoreCase = .T.
 // The Pattern property stores the specials characters that defines the math pattern.
 _vfp.FoxRegEx.Pattern = "cat"
-// Call the Execute() method with the source string.
+// Call the Replace() method with the source string and the replacement text.
 lcReplacedText = _vfp.FoxRegEx.Replace("the mouse and the cat", "cheese")
 ?lcReplacedText
 ```
