@@ -38,8 +38,8 @@ Just copy the FoxRegEx prg anywhere into your project PATH folder.
 // declare the FoxRegEx Prg
 Set Procedure to "FoxRegEx" Additive
 
-// Instantiate FoxFaker Object
-=AddProperty(_vfp, "FoxRegEx", CreateObject("FoxFaker", "FoxFaker.prg"))
+// Instantiate FoxRegEx Object
+=AddProperty(_vfp, "FoxRegEx", CreateObject("FoxRegEx"))
 // The Pattern property stores the specials characters that defines the math pattern.
 _vfp.FoxRegEx.Pattern = "vfp"
 // Call the Test() method for quick pattern validations.
