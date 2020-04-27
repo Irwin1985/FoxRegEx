@@ -26,6 +26,7 @@ A regular expression is a string that describes a match pattern. The match patte
 	- [Hex-Color](#hex-color)
 	- [Date](#date)
 	- [Credit-Card](#credit-card)
+	- [Password](#password)
 - [License](#license)
 
 
@@ -156,6 +157,29 @@ _vfp.FoxRegEx.isCreditCard("38659767869174", "Diners Club")  // .T.
 _vfp.FoxRegEx.isCreditCard("6011063396747026", "Discover")  // .T.
 // JCB
 _vfp.FoxRegEx.isCreditCard("3538684728624673", "JCB")  // .T.
+```
+### `Password`
+```xBase
+// isPassword() method expects 1 required param for the input string
+// The second param is optional where empty means "Full validation" or use these mnemonic:
+// "s" for symbol validation
+// "n" for numbers
+// "l" for lowercase
+// "u" for uppercase
+// or simply combine them for a custom validation eg: "snu", "ul", etc
+
+// Full Strenght
+_vfp.FoxRegEx.isPassword("Wh:%RxM<q8UL$Y+/")  // .T.
+// Just Symbols
+_vfp.FoxRegEx.isPassword("}?(;!*@+}\)(,://", "s")  // .T.
+// Just Numbers
+_vfp.FoxRegEx.isPassword("16795371", "n")  // .T.
+// Just LowerCase
+_vfp.FoxRegEx.isPassword("secret", "l")  // .T.
+// Just UpperCase
+_vfp.FoxRegEx.isPassword("SECRET", "u")  // .T.
+// Allow Letters (UpperCase and LowerCase)
+_vfp.FoxRegEx.isPassword("sEcREt", "ul")  // .T.
 ```
 ## License
 
