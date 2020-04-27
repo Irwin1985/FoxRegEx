@@ -16,14 +16,14 @@ A regular expression is a string that describes a match pattern. The match patte
 - [Using Object](#using-object)
 - [Built-in RegEx](#built-in-regex)
 	- [URL](#url)
-	- [IPv4](#foxregexbuiltinipv4)
-	- [IPv6](#foxregexbuiltinipv6)
-	- [Email](#foxregexbuiltinemail)
-	- [YoutubeVideoID](#foxregexbuiltinyoutubevideoid)
-	- [YoutubeChannelID](#foxregexbuiltinyoutubechannelid)
-	- [HTML Tag](#foxregexbuiltinhtmltag)
-	- [Hex Color](#foxregexbuiltinhexcolor)
-	- [Date](#foxregexbuiltindate)
+	- [IPv4](#ipv4)
+	- [IPv6](#ipv6)
+	- [Email](#email)
+	- [Youtube Video ID](#youtube-video-id)
+	- [Youtube Channel ID](#youtube-channel-id)
+	- [HTML Tag](#html-tag)
+	- [Hex Color](#hex-color)
+	- [Date](#date)
 - [License](#license)
 
 
@@ -91,27 +91,27 @@ FoxRegEx comes with some built-in commons validators patterns such as email, URL
 ```xBase
     _vfp.FoxRegEx.isURL("https://github.com/Irwin1985/FoxRegEx")  // .T.
 ```
-### `FoxRegEx\Builtin\IPv4`
+### `IPv4`
 ```xBase
     _vfp.FoxRegEx.isIPv4("192.168.0.1")  // .T.
 ```
-### `FoxRegEx\Builtin\IPv6`
+### `IPv6`
 ```xBase
     _vfp.FoxRegEx.isIPv6("2001:db8:0:1:1:1:1:1")  // .T.
 ```
-### `FoxRegEx\Builtin\Email`
+### `Email`
 ```xBase
     _vfp.FoxRegEx.isEmail("rodriguez.irwin@gmail.com")  // .T.
 ```
-### `FoxRegEx\Builtin\YoutubeVideoID`
+### `Youtube Video ID`
 ```xBase
     _vfp.FoxRegEx.isYoutubeVideoID("https://www.youtube.com/watch?v=UUjpNm07vL8")  // .T.
 ```
-### `FoxRegEx\Builtin\YoutubeChannelID`
+### `Youtube Channel ID`
 ```xBase
     _vfp.FoxRegEx.isYoutubeChannelID("https://www.youtube.com/c/IrwinRodriguez")  // .T.
 ```
-### `FoxRegEx\Builtin\Date`
+### `Date`
 ```xBase
     // Provide any valid date format
     _vfp.FoxRegEx.isDate("15/11/1985", "dd/mm/YYYY")  // .T.
