@@ -32,22 +32,18 @@ Just copy the FoxRegEx prg anywhere into your project PATH folder.
 ```
 
 ## Basic Usage
-
-Use a **Public** Variable or a **_Screen Property** to instantiate `FoxFaker.prg` object.
-
 ```xBase
-Public Faker
-// require the FoxFaker Prg
-Set Procedure to "FoxFaker" Additive
+// declare the FoxRegEx Prg
+Set Procedure to "FoxRegEx" Additive
 
 // Instantiate FoxFaker Object
-Faker = NewObject("FoxFaker", "FoxFaker.prg")
+=AddProperty(_vfp, "FoxRegEx", CreateObject("FoxFaker", "FoxFaker.prg"))
 
-// Generate data by accessing properties. 
-// All methods are written using 'fake' as prefix
-// for avoiding "Function Name" conflict, when calling Faker.name()
-
-?Faker.fakeName() 	// 'Jhon Doe'
+// Set the <code>Global</code> Flag true if you want to match all occurrences.
+_vfp.Global = .T.
+// Turn on IgnoreCase flag for matching lowercase and uppercase.
+_vfp.IgnoreCase = .T.
+// Turn on IgnoreCase flag for matching lowercase and uppercase.
 
 ?Faker.fakeAddress() 	// "426 Jordy Lodge Cartwrightshire, SC 88120-6700"
 ?Faker.text()
