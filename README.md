@@ -14,7 +14,7 @@ A regular expression is a string that describes a match pattern. The match patte
 - [Simple Test](#simple-test)
 - [Using Cursor](#using-cursor)
 - [Using Object](#using-object)
-- [Built-in RegEx](#formatters)
+- [Built-in RegEx](#built-in-regex)
 	- [URL](#foxregexbuiltinurl)
 	- [IPv4](#foxregexbuiltinipv4)
 	- [IPv6](#foxregexbuiltinipv6)
