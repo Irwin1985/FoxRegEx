@@ -2,13 +2,11 @@
 
 `FoxRegEx` is a Visual FoxPro Class library that wrappers the <code>RegEx</code> built-in object in VBScript.
 
-<h2>Overview</h2>(#overview)
+<h2>Overview</h2>
 
-`FoxFaker` was written with the purpose to be used with [FoxUnit](https://github.com/VFPX/FoxUnit) and [FoxMock](https://github.com/cwollenhaupt/foxmock) libraries. If you're not familiar with TDD (Test Driven Development) then you probably need to learn about it or just ignore it and use `FoxFaker` as you wish.
+`FoxRegEx` matches any string against special text pattern called `Regular Expression` and returns either an object or a cursor filled  with all the matches.
 
-`FoxFaker` is heavily inspired by PHP's [Faker](https://github.com/fzaninotto/Faker).
-
-`FoxFaker` works quite good on VFP >= 7
+A regular expression is a string that describes a match pattern. The match pattern provides a template that can be used to test another string, the search string, for a matching sub-string. In its simplest form, the match pattern string is just a sequence of characters that must be matched. For example, the pattern "vfp" matches this exact sequence of characters and only this sequence. More sophisticated regular expressions can match against items such as file names, path names, and Internet URLs. Thus, the RegExp object is frequently used to validate data for correct form and syntax.
 
 # Table of Contents
 
