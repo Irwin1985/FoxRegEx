@@ -21,8 +21,8 @@ A regular expression is a string that describes a match pattern. The match patte
 	- [Email](#email)
 	- [Youtube-Video-ID](#youtube-video-id)
 	- [Youtube-Channel-ID](#youtube-channel-id)
-	- [HTML-Tag](#html-tag)
-	- [Hex-Color](#hex-color)
+	- [HTML Tag](#html-tag)
+	- [Hex Color](#hex-color)
 	- [Date](#date)
 - [License](#license)
 
@@ -111,11 +111,11 @@ _vfp.FoxRegEx.isYoutubeVideoID("https://www.youtube.com/watch?v=UUjpNm07vL8")  /
 ```xBase
 _vfp.FoxRegEx.isYoutubeChannelID("https://www.youtube.com/c/IrwinRodriguez")  // .T.
 ```
-### `HTML-Tag`
+### `HTML Tag`
 ```xBase
 _vfp.FoxRegEx.isHTMLTag("<vfp>Fox Rules!</vfp>")  // .T.
 ```
-### `Hex-Color`
+### `Hex Color`
 ```xBase
 _vfp.FoxRegEx.isHexColor("#FFFFFF")  // .T.
 ```
