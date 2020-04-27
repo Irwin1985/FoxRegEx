@@ -19,10 +19,10 @@ A regular expression is a string that describes a match pattern. The match patte
 	- [IPv4](#ipv4)
 	- [IPv6](#ipv6)
 	- [Email](#email)
-	- [Youtube Video ID](#youtube-video-id)
-	- [Youtube Channel ID](#youtube-channel-id)
-	- [HTML Tag](#html-tag)
-	- [Hex Color](#hex-color)
+	- [Youtube-Video-ID](#youtube-video-id)
+	- [Youtube-Channel-ID](#youtube-channel-id)
+	- [HTML-Tag](#html-tag)
+	- [Hex-Color](#hex-color)
 	- [Date](#date)
 - [License](#license)
 
@@ -89,39 +89,47 @@ FoxRegEx comes with some built-in commons validators patterns such as email, URL
 
 ### `URL`
 ```xBase
-    _vfp.FoxRegEx.isURL("https://github.com/Irwin1985/FoxRegEx")  // .T.
+_vfp.FoxRegEx.isURL("https://github.com/Irwin1985/FoxRegEx")  // .T.
 ```
 ### `IPv4`
 ```xBase
-    _vfp.FoxRegEx.isIPv4("192.168.0.1")  // .T.
+_vfp.FoxRegEx.isIPv4("192.168.0.1")  // .T.
 ```
 ### `IPv6`
 ```xBase
-    _vfp.FoxRegEx.isIPv6("2001:db8:0:1:1:1:1:1")  // .T.
+_vfp.FoxRegEx.isIPv6("2001:db8:0:1:1:1:1:1")  // .T.
 ```
 ### `Email`
 ```xBase
-    _vfp.FoxRegEx.isEmail("rodriguez.irwin@gmail.com")  // .T.
+_vfp.FoxRegEx.isEmail("rodriguez.irwin@gmail.com")  // .T.
 ```
-### `Youtube Video ID`
+### `Youtube-Video-ID`
 ```xBase
-    _vfp.FoxRegEx.isYoutubeVideoID("https://www.youtube.com/watch?v=UUjpNm07vL8")  // .T.
+_vfp.FoxRegEx.isYoutubeVideoID("https://www.youtube.com/watch?v=UUjpNm07vL8")  // .T.
 ```
-### `Youtube Channel ID`
+### `Youtube-Channel-ID`
 ```xBase
-    _vfp.FoxRegEx.isYoutubeChannelID("https://www.youtube.com/c/IrwinRodriguez")  // .T.
+_vfp.FoxRegEx.isYoutubeChannelID("https://www.youtube.com/c/IrwinRodriguez")  // .T.
+```
+### `HTML-Tag`
+```xBase
+_vfp.FoxRegEx.isHTMLTag("<vfp>Fox Rules!</vfp>")  // .T.
+```
+### `Hex-Color`
+```xBase
+_vfp.FoxRegEx.isHexColor("#FFFFFF")  // .T.
 ```
 ### `Date`
 ```xBase
-    // Provide any valid date format
-    _vfp.FoxRegEx.isDate("15/11/1985", "dd/mm/YYYY")  // .T.
-    // using YYYY-mm-dd
-    _vfp.FoxRegEx.isDate("1985-11-15", "YYYY-mm-dd")  // .T.
-    // using mm-dd-YYYY
-    _vfp.FoxRegEx.isDate("11-15-1985", "mm-dd-YYYY")  // .T.
-    // using short year format
-    _vfp.FoxRegEx.isDate("11-15-85", "mm-dd-YY")  // .T.
+// Provide any valid date format
+_vfp.FoxRegEx.isDate("15/11/1985", "dd/mm/YYYY")  // .T.
+// using YYYY-mm-dd
+_vfp.FoxRegEx.isDate("1985-11-15", "YYYY-mm-dd")  // .T.
+// using mm-dd-YYYY
+_vfp.FoxRegEx.isDate("11-15-1985", "mm-dd-YYYY")  // .T.
+// using short year format
+_vfp.FoxRegEx.isDate("11-15-85", "mm-dd-YY")  // .T.
 ```
 ## License
 
-Faker is released under the MIT Licence.
+FoxRegEx is released under the MIT Licence.
