@@ -1,0 +1,5 @@
+appName = FoxRegEx
+appID = FoxRegEx
+majorVersion = 2020.04.06.20.34
+excludeFiles = *.bak,*.bat,*.fxp,*.pj?,*.txt,foxuser.*,*.md,.gitignore,*.vbr,*.png,*.zip
+excludeFolders = *ThorUpdater*,*Tests*,*Tools*
